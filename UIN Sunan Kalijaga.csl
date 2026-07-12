@@ -316,7 +316,6 @@
     </group>
   </macro>
 <macro name="label-page">
-  <text value="TEST"/>
 </macro>
   <macro name="label-part-number">
     <group delimiter=" ">
@@ -4200,7 +4199,7 @@
       <else-if variable="locator">
         <text macro="label-locator"/>
       </else-if>
-      <else-if is-numeric="volume" variable="page">
+      <else-if is-numeric="volume" variable="locator">
         <!-- collapse the volume and page number if adjacent (CMOS18 14.18) -->
         <group delimiter=":">
           <choose>
@@ -4216,7 +4215,6 @@
           </choose>
           <choose>
   <if type="book">
-    <text variable="page"/>
   </if>
   <else>
     <text macro="label-page"/>
@@ -4225,11 +4223,10 @@
         </group>
       </else-if>
       <!-- archival locators appear after the shelfmark (CMOS18 14.127) -->
-      <else-if variable="archive archive_location page"/>
+      <else-if variable="archive archive_location locator"/>
       <else>
   <choose>
     <if type="book">
-      <text variable="page"/>
     </if>
     <else>
       <text macro="label-page"/>
@@ -5456,15 +5453,14 @@
       <else-if locator="page" variable="archive archive_location">
         <text macro="label-locator-all"/>
       </else-if>
-      <else-if variable="archive archive_location page">
+      <else-if variable="archive archive_location locator">
         <choose>
-          <if is-numeric="page">
+          <if is-numeric="locator">
             <!-- TODO: remove this conditional when `page` parsing is fixed for different locator
             types -->
             <text macro="label-page"/>
           </if>
           <else>
-            <text variable="page"/>
           </else>
         </choose>
       </else-if>
