@@ -315,12 +315,12 @@
       </choose>
     </group>
   </macro>
-  <macro name="label-page">
-    <group delimiter=" ">
-      <label form="short" variable="page"/>
-      <text variable="page"/>
-    </group>
-  </macro>
+ <macro name="label-page">
+  <group delimiter=" ">
+    <text value="hlm."/>
+    <text variable="page"/>
+  </group>
+</macro>
   <macro name="label-part-number">
     <group delimiter=" ">
       <choose>
