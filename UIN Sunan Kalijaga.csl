@@ -5462,6 +5462,7 @@
             <text macro="label-page"/>
           </if>
           <else>
+            <text value=""/>
           </else>
         </choose>
       </else-if>
