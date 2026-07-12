@@ -316,6 +316,7 @@
     </group>
   </macro>
 <macro name="label-page">
+  <text value=""/>
 </macro>
   <macro name="label-part-number">
     <group delimiter=" ">
