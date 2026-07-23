@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="note"
-  demote-non-dropping-particle="display-and-sort" page-range-format="chicago-16" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" demote-non-dropping-particle="display-and-sort" page-range-format="chicago-16" version="1.0">
   <!--
     UIN Sunan Kalijaga Thesis (Notes and Bibliography)
     Copyright (c) 2026 Fasih Hulisan
@@ -20,7 +19,7 @@
     <link href="https://github.com/fasihhulisan/UIN-Sunan-Kalijaga-CSL" rel="documentation"/>
 
     <author>
-        <name>Fasih Hulisan</name>
+      <name>Fasih Hulisan</name>
     </author>
 
     <category citation-format="note"/>
@@ -315,9 +314,9 @@
       </choose>
     </group>
   </macro>
-<macro name="label-page">
-  <text value=""/>
-</macro>
+  <macro name="label-page">
+    <text value=""/>
+  </macro>
   <macro name="label-part-number">
     <group delimiter=" ">
       <choose>
@@ -425,8 +424,7 @@
       </choose>
       <text variable="volume"/>
       <!-- always display number of volumes in notes without bibliography (CMOS18 14.20): -->
-      <!-- <choose><if is-numeric="number-of-volumes" variable="volume"><text value="of"/><text
-      variable="number-of-volumes"/></if></choose>-->
+      <!-- <choose><if is-numeric="number-of-volumes" variable="volume"><text value="of"/><text variable="number-of-volumes"/></if></choose>-->
     </group>
   </macro>
   <macro name="label-volume-capitalized">
@@ -3781,8 +3779,8 @@
       <!-- do not give pages for magazines or newspapers (CMOS18 14.87, 14.89) -->
       <else-if match="any" type="article-magazine article-newspaper"/>
       <else>
-  <text macro="label-page"/>
-</else>
+        <text macro="label-page"/>
+      </else>
     </choose>
   </macro>
   <!-- 4.2. Monographic sources -->
@@ -3944,8 +3942,7 @@
           <text macro="identifier-edition-note"/>
           <text macro="source-monographic-identifier-contributors-and-volume-bib"/>
           <!-- for author-date or notes and bibliography leading with volume title (CMOS18 14.21): -->
-          <!-- <text
-          macro="source-monographic-identifier-contributors-and-volume-bib-specific-title-first"/> -->
+          <!-- <text macro="source-monographic-identifier-contributors-and-volume-bib-specific-title-first"/> -->
         </group>
       </if>
     </choose>
@@ -4215,25 +4212,25 @@
             </else>
           </choose>
           <choose>
-  <if type="book">
-  </if>
-  <else>
-    <text macro="label-page"/>
-  </else>
-</choose>
+            <if type="book">
+            </if>
+            <else>
+              <text macro="label-page"/>
+            </else>
+          </choose>
         </group>
       </else-if>
       <!-- archival locators appear after the shelfmark (CMOS18 14.127) -->
       <else-if variable="archive archive_location locator"/>
       <else>
-  <choose>
-    <if type="book">
-    </if>
-    <else>
-      <text macro="label-page"/>
-    </else>
-  </choose>
-</else>
+        <choose>
+          <if type="book">
+          </if>
+          <else>
+            <text macro="label-page"/>
+          </else>
+        </choose>
+      </else>
     </choose>
   </macro>
   <!-- 4.3. Series -->
@@ -5504,31 +5501,31 @@
   </macro>
   <!-- 4.10. URL or persistent identifier -->
   <macro name="source-date-accessed-DOI-URL-bib">
-  <choose>
-    <if type="webpage post-weblog">
-      <group delimiter=". ">
-        <group delimiter=" ">
-          <text term="accessed" text-case="capitalize-first"/>
-          <date form="text" variable="accessed"/>
+    <choose>
+      <if type="webpage post-weblog">
+        <group delimiter=". ">
+          <group delimiter=" ">
+            <text term="accessed" text-case="capitalize-first"/>
+            <date form="text" variable="accessed"/>
+          </group>
+          <text macro="source-DOI-URL"/>
         </group>
-        <text macro="source-DOI-URL"/>
-      </group>
-    </if>
-  </choose>
-</macro>
+      </if>
+    </choose>
+  </macro>
   <macro name="source-date-accessed-DOI-URL-note">
-  <choose>
-    <if type="webpage post-weblog">
-      <group delimiter=", ">
-        <group delimiter=" ">
-          <text term="accessed"/>
-          <date form="text" variable="accessed"/>
+    <choose>
+      <if type="webpage post-weblog">
+        <group delimiter=", ">
+          <group delimiter=" ">
+            <text term="accessed"/>
+            <date form="text" variable="accessed"/>
+          </group>
+          <text macro="source-DOI-URL"/>
         </group>
-        <text macro="source-DOI-URL"/>
-      </group>
-    </if>
-  </choose>
-</macro>
+      </if>
+    </choose>
+  </macro>
   <macro name="source-DOI-URL">
     <choose>
       <if variable="DOI">
@@ -5954,9 +5951,18 @@
   <citation disambiguate-add-givenname="true" disambiguate-add-names="true" et-al-min="4" et-al-use-first="1">
     <layout delimiter="; " suffix=".">
       <choose>
-        <if position="subsequent">
-          <text macro="citation-notes-shortened-author-title"/>
+        <if position="ibid-with-locator">
+          <group delimiter=", ">
+            <text value="Ibid."/>
+            <text variable="locator"/>
+          </group>
         </if>
+        <else-if position="ibid">
+          <text value="Ibid"/>
+        </else-if>
+        <else-if position="subsequent">
+          <text macro="citation-notes-shortened-author-title"/>
+        </else-if>
         <else>
           <text macro="citation-notes-full"/>
         </else>
