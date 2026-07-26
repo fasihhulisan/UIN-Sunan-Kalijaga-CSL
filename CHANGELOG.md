@@ -39,6 +39,10 @@ The format is inspired by Keep a Changelog.
 - Preserved translator formatting using the existing Chicago Notes & Bibliography convention.
 - Began final audit of Book Section, Encyclopedia Article, and Edited Collection citation formats against the official UIN thesis manual.
 - Removed the default "in" preposition before monographic container titles to match UIN Sunan Kalijaga citation guidelines.
+- Customized monographic note formatting for UIN Sunan Kalijaga guideline.
+- Removed the automatic preposition "dalam" for edited monographic works (Book Section, Encyclopedia Article, and similar references).
+- Added a dedicated `source-monographic-note-uin` macro to preserve Chicago behavior for other reference types.
+- Applied the custom UIN formatting only to monographic references with editors, leaving all other citation types unchanged.
 
 ### Fixed
 

@@ -3306,9 +3306,16 @@
       <else-if match="any" type="article-journal article-magazine article-newspaper periodical post-weblog review review-book">
         <text macro="source-serial-note"/>
       </else-if>
-      <else-if match="any" variable="collection-editor compiler editor editorial-director">
-        <text macro="source-monographic-note"/>
-      </else-if>
+    <else-if match="any" variable="collection-editor compiler editor editorial-director">
+      <choose>
+        <if match="any" type="chapter entry entry-dictionary entry-encyclopedia">
+          <text macro="source-monographic-note-uin"/>
+        </if>
+        <else>
+          <text macro="source-monographic-note"/>
+        </else>
+      </choose>
+    </else-if>
       <else-if match="any" type="interview paper-conference">
         <text macro="source-serial-note"/>
       </else-if>
@@ -3316,6 +3323,21 @@
         <text macro="source-monographic-note"/>
       </else>
     </choose>
+  </macro>
+ <macro name="source-monographic-note-uin">
+    <group delimiter=", ">
+      <choose>
+        <if variable="container-title">
+          <group delimiter=", ">
+            <text font-style="italic" text-case="title" variable="container-title"/>
+            <text macro="source-monographic-description"/>
+            <text macro="source-monographic-identifier-note"/>
+          </group>
+        </if>
+      </choose>
+      <text macro="source-series-note"/>
+      <text macro="source-event-note"/>
+    </group>
   </macro>
   <!-- 4.1. Serial sources -->
   <macro name="source-serial-bib">
@@ -3889,6 +3911,8 @@
         </choose>
       </else-if>
       <else-if variable="chapter-number page title">
+        <text term="in"/>
+      </else-if>
       <else-if variable="chapter-number">
         <group delimiter=" ">
           <text macro="label-chapter-number"/>
