@@ -61,6 +61,9 @@ The format is inspired by Keep a Changelog.
 - Fixed archive locator handling.
 - Fixed page locator labeling.
 - Improved compatibility with Mendeley Reference Manager.
+- Removed unnecessary "in" from footnotes and bibliography for edited monographic sources (book sections, encyclopedia entries, and anthology chapters) to match UIN Sunan Kalijaga citation guidelines.
+- Changed edited monographic references to use `Editor (ed.)` instead of `edited by` in bibliography.
+- Improved multivolume book handling by suppressing redundant volume labels in footnotes, preparing support for UIN-style volume-page formatting (e.g., `III:155`).
 
 ### Known Limitation
 
