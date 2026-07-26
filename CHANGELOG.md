@@ -43,6 +43,10 @@ The format is inspired by Keep a Changelog.
 - Removed the automatic preposition "dalam" for edited monographic works (Book Section, Encyclopedia Article, and similar references).
 - Added a dedicated `source-monographic-note-uin` macro to preserve Chicago behavior for other reference types.
 - Applied the custom UIN formatting only to monographic references with editors, leaving all other citation types unchanged.
+- Added a dedicated bibliography macro for edited monographic works.
+- Removed the automatic "In" prefix in bibliography entries for edited books.
+- Replaced the default Chicago "edited by" label with the UIN-preferred "(ed.)" notation.
+- Applied the customization only to Book Section, Encyclopedia Article, and similar edited monographic references.
 
 ### Fixed
 

@@ -3289,8 +3289,15 @@
       <else-if match="any" type="article-journal article-magazine article-newspaper periodical post-weblog review review-book">
         <text macro="source-serial-bib"/>
       </else-if>
-      <else-if match="any" variable="collection-editor compiler editor editorial-director">
-        <text macro="source-monographic-bib"/>
+     <else-if match="any" variable="collection-editor compiler editor editorial-director">
+        <choose>
+          <if match="any" type="chapter entry entry-dictionary entry-encyclopedia">
+            <text macro="source-monographic-bib-uin"/>
+          </if>
+          <else>
+            <text macro="source-monographic-bib"/>
+          </else>
+        </choose>
       </else-if>
       <else-if match="any" type="interview paper-conference">
         <text macro="source-serial-bib"/>
@@ -3834,6 +3841,25 @@
       </choose>
     </group>
   </macro>
+ <macro name="source-monographic-bib-uin">
+    <group delimiter=". ">
+      <choose>
+        <if variable="container-title">
+          <group delimiter=". ">
+            <text font-style="italic" text-case="title" variable="container-title"/>
+            <text macro="source-monographic-identifier-bib-uin"/>
+            <text macro="source-monographic-locator"/>
+          </group>
+        </if>
+      </choose>
+      <text macro="source-series-bib"/>
+      <choose>
+        <if match="any" variable="event-date original-date original-publisher original-publisher-place publisher status">
+          <text macro="source-event-bib"/>
+        </if>
+      </choose>
+    </group>
+  </macro>
   <macro name="source-monographic-note">
     <group delimiter=", ">
       <!-- Monographic sources repeat main reference elements -->
@@ -3968,6 +3994,12 @@
         </group>
       </if>
     </choose>
+  </macro>
+ <macro name="source-monographic-identifier-bib-uin">
+    <names variable="editor">
+      <name and="text"/>
+      <label form="short" prefix=" (" suffix=")"/>
+    </names>
   </macro>
   <macro name="source-monographic-identifier-note">
     <!-- Based on `identifier-note` -->
