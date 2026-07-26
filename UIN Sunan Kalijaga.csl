@@ -3889,8 +3889,6 @@
         </choose>
       </else-if>
       <else-if variable="chapter-number page title">
-        <text term="in"/>
-      </else-if>
       <else-if variable="chapter-number">
         <group delimiter=" ">
           <text macro="label-chapter-number"/>

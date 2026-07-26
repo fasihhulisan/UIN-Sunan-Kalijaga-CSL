@@ -38,6 +38,7 @@ The format is inspired by Keep a Changelog.
 - Adjusted editor formatting from **"ed. oleh John Doe"** to **"John Doe (ed.)"** to match UIN Sunan Kalijaga citation guidelines.
 - Preserved translator formatting using the existing Chicago Notes & Bibliography convention.
 - Began final audit of Book Section, Encyclopedia Article, and Edited Collection citation formats against the official UIN thesis manual.
+- Removed the default "in" preposition before monographic container titles to match UIN Sunan Kalijaga citation guidelines.
 
 ### Fixed
 
