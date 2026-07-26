@@ -4046,7 +4046,11 @@
         <label form="verb-short" suffix=" "/>
         <name and="text"/>
       </names>
-      <names delimiter=", " variable="editor translator">
+      <names delimiter=", " variable="editor">
+        <name and="text"/>
+        <label form="short" prefix=" (" suffix=")"/>
+      </names>
+      <names variable="translator">
         <label form="verb-short" suffix=" "/>
         <name and="text"/>
       </names>
