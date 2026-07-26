@@ -64,6 +64,7 @@ The format is inspired by Keep a Changelog.
 - Removed unnecessary "in" from footnotes and bibliography for edited monographic sources (book sections, encyclopedia entries, and anthology chapters) to match UIN Sunan Kalijaga citation guidelines.
 - Changed edited monographic references to use `Editor (ed.)` instead of `edited by` in bibliography.
 - Improved multivolume book handling by suppressing redundant volume labels in footnotes, preparing support for UIN-style volume-page formatting (e.g., `III:155`).
+- Adjusted multivolume book footnote handling to correctly combine volume and page locator.
 
 ### Known Limitation
 

@@ -4239,7 +4239,7 @@
       <if locator="column" variable="archive archive_location"/>
       <else-if locator="folio" variable="archive archive_location"/>
       <else-if locator="page" variable="archive archive_location"/>
-      <else-if is-numeric="volume" locator="page">
+      <else-if variable="volume" locator="page">
         <!-- separate a volume and page number with a colon (CMOS18 14.18) -->
         <group delimiter=":">
           <choose>
