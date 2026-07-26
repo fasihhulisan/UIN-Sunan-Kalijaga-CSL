@@ -47,6 +47,9 @@ The format is inspired by Keep a Changelog.
 - Removed the automatic "In" prefix in bibliography entries for edited books.
 - Replaced the default Chicago "edited by" label with the UIN-preferred "(ed.)" notation.
 - Applied the customization only to Book Section, Encyclopedia Article, and similar edited monographic references.
+- Adjusted handling of multivolume books in footnotes.
+- Suppressed duplicate volume output before publication information for `book` references with page locators.
+- Prepared CSL behavior to match the UIN Sunan Kalijaga guideline format for multivolume books (`Title (Place: Publisher, Year), III:155`).
 
 ### Fixed
 
