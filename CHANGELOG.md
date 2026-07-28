@@ -6,7 +6,7 @@ The format is inspired by Keep a Changelog.
 
 ---
 
-## [1.0.0] - 2026-07-26
+## [1.0.0] - 2026-07-28
 
 ### Added
 
@@ -53,7 +53,8 @@ The format is inspired by Keep a Changelog.
 - Improved footnote formatting for multivolume books by separating volume handling from the standard monographic identifier.
 - Added dedicated `book-volume-bib` macro to support bibliography formatting for multivolume books.
 - Prepared independent volume handling to simplify future customization of UIN citation rules.
-
+- Updated CSL metadata (`<rights>`) to comply with CitationStyles.org validator.
+- Added license section to README.
 ### Fixed
 
 - Correct implementation of:
