@@ -68,6 +68,10 @@ The format is inspired by Keep a Changelog.
 - Changed edited monographic references to use `Editor (ed.)` instead of `edited by` in bibliography.
 - Improved multivolume book handling by suppressing redundant volume labels in footnotes, preparing support for UIN-style volume-page formatting (e.g., `III:155`).
 - Adjusted multivolume book footnote handling to correctly combine volume and page locator.
+- Adjusted Working Paper (`report`) title formatting to comply with UIN Sunan Kalijaga citation guidelines.
+- Changed Working Paper titles from italic to quoted style in both footnotes and bibliography.
+- Preserved institutional document names (`collection-title`) as plain text following the title.
+- Verified compatibility with Mendeley Reference Manager Working Paper item type.
 
 ### Known Limitation
 
