@@ -1258,6 +1258,7 @@
           </else>
         </choose>
         <text macro="source-monographic-publication-bib"/>
+        <text macro="book-volume-bib"/>
       </group>
       <text macro="source-medium-bib"/>
       <text macro="source-archive-bib"/>
@@ -1310,13 +1311,13 @@
         <if match="any" type="article-journal article-magazine article-newspaper periodical post-weblog review review-book"/>
         <else-if match="any" variable="collection-editor compiler editor editorial-director">
           <!-- monographic types -->
-          <text macro="source-monographic-locator"/>
+          <text macro="source-book-volume-locator-note"/>
         </else-if>
         <!-- omit serial types -->
         <else-if match="any" type="interview paper-conference"/>
         <else>
           <!-- monographic types -->
-          <text macro="source-monographic-locator"/>
+          <text macro="source-book-volume-locator-note"/>
         </else>
       </choose>
       <text macro="source-medium-note"/>
@@ -3037,7 +3038,12 @@
         </if>
       </choose>
       <group delimiter=", ">
-        <text macro="identifier-volume-bib"/>
+        <choose>
+          <if type="book"/>
+          <else>
+            <text macro="identifier-volume-bib"/>
+          </else>
+        </choose>
         <choose>
           <if match="any" variable="part-number part-title volume volume-title">
             <text macro="identifier-contributors-monographic-bib-multivolume"/>
@@ -3280,6 +3286,16 @@
         </else-if>
       </choose>
     </group>
+  </macro>
+  <macro name="book-volume-bib">
+    <choose>
+      <if type="book" variable="volume">
+        <group delimiter=" ">
+          <text value="Vol"/>
+          <text variable="volume"/>
+        </group>
+      </if>
+    </choose>
   </macro>
   <!-- 4. Source -->
   <macro name="source-bib">
@@ -4189,7 +4205,12 @@
         </if>
       </choose>
       <!-- use the note form for an item with `container-title` -->
-      <text macro="identifier-volume-note"/>
+      <choose>
+        <if type="book"/>
+        <else>
+          <text macro="identifier-volume-note"/>
+        </else>
+      </choose>
       <text macro="source-monographic-identifier-contributors-bib"/>
       <choose>
         <if match="any" variable="part-number part-title volume volume-title"/>
@@ -4211,6 +4232,7 @@
           </names>
         </if>
       </choose>
+      <!-- tampilkan volume hanya bila TIDAK ada locator halaman -->
       <choose>
         <if type="book" locator="page"/>
         <else>
@@ -4218,10 +4240,10 @@
         </else>
       </choose>
       <text macro="source-monographic-identifier-contributors-note"/>
+      <!-- jika ada locator halaman pada book, volume akan dicetak oleh macro locator -->
       <choose>
-        <!-- notes only show the number of volumes if there is no physical locator, which should
-           include a volume number, e.g. 4:243; except when using notes without bibliography (CMOS18 14.20) -->
-        <if match="any" variable="part-number part-title volume volume-title"/>
+        <if type="book" locator="page"/>
+        <else-if match="any" variable="part-number part-title volume volume-title"/>
         <else-if locator="column"/>
         <else-if locator="folio"/>
         <else-if locator="page"/>
@@ -4291,6 +4313,19 @@
             <text macro="label-page"/>
           </else>
         </choose>
+      </else>
+    </choose>
+  </macro>
+  <macro name="source-book-volume-locator-note">
+    <choose>
+      <if type="book" is-numeric="volume" locator="page">
+        <group delimiter=":">
+          <text variable="volume"/>
+          <text variable="locator"/>
+        </group>
+      </if>
+      <else>
+        <text macro="source-monographic-locator"/>
       </else>
     </choose>
   </macro>

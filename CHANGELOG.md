@@ -50,6 +50,9 @@ The format is inspired by Keep a Changelog.
 - Adjusted handling of multivolume books in footnotes.
 - Suppressed duplicate volume output before publication information for `book` references with page locators.
 - Prepared CSL behavior to match the UIN Sunan Kalijaga guideline format for multivolume books (`Title (Place: Publisher, Year), III:155`).
+- Improved footnote formatting for multivolume books by separating volume handling from the standard monographic identifier.
+- Added dedicated `book-volume-bib` macro to support bibliography formatting for multivolume books.
+- Prepared independent volume handling to simplify future customization of UIN citation rules.
 
 ### Fixed
 
