@@ -6,6 +6,14 @@ The format is inspired by Keep a Changelog.
 
 ---
 
+## [1.0.1] - 2026-07-28
+
+### Fixed
+- Updated CSL metadata to comply with CitationStyles.org repository validator.
+- Corrected `<rights>` licensing metadata.
+- Added author ORCID metadata.
+- No changes to citation or bibliography formatting.
+
 ## [1.0.0] - 2026-07-28
 
 ### Added

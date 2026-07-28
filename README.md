@@ -6,6 +6,15 @@ This CSL is based on the official citation and bibliography of the thesis guidel
 
 ---
 
+## Latest Release
+
+Current stable release:
+
+**v1.0.1**
+
+- Repository-validator compliant
+- Ready for CSL Repository submission
+
 ## Features
 
 - Footnote-based citation style.
