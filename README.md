@@ -6,7 +6,7 @@ This CSL is based on the official citation and bibliography of the thesis guidel
 
 ---
 
-## ✨ Features
+## Features
 
 - Footnote-based citation style.
 - Bibliography formatted according to UIN Sunan Kalijaga thesis guidelines.
@@ -16,7 +16,7 @@ This CSL is based on the official citation and bibliography of the thesis guidel
 
 ---
 
-## 📦 Installation
+## Installation
 
 1. Download the latest `UIN Sunan Kalijaga.csl` file.
 2. Open your reference manager.
@@ -25,17 +25,17 @@ This CSL is based on the official citation and bibliography of the thesis guidel
 
 ---
 
-## 🚀 Compatibility
+## Compatibility
 
 This CSL has been tested with:
 
-- ✅ Zotero
-- ✅ Mendeley Reference Manager
-- ✅ Mendeley Cite for Microsoft Word
+-  Zotero
+-  Mendeley Reference Manager
+-  Mendeley Cite for Microsoft Word
 
 ---
 
-## 📚 Supported Reference Types
+## Supported Reference Types
 
 This CSL supports common reference types including:
 
@@ -56,7 +56,7 @@ This CSL supports common reference types including:
 
 ---
 
-## ⚠️ Known Limitation
+## Known Limitation
 
 ### Mendeley Cite Page Range Input
 
@@ -96,13 +96,13 @@ docs/Mendeley Cite-Page Range Limitation.docx
 
 ---
 
-## 📄 Documentation
+## Documentation
 
 Additional documentation is available in the `docs` directory.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Bug reports, suggestions, and pull requests are welcome.
 
@@ -110,7 +110,7 @@ If you encounter compatibility issues with specific reference managers, please o
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)** License.
 
@@ -118,13 +118,13 @@ See the LICENSE file for details.
 
 ---
 
-## 👤 Author
+## Author
 
 **Fasih Hulisan**
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - UIN Sunan Kalijaga Yogyakarta
 - Citation Style Language (CSL) Project
