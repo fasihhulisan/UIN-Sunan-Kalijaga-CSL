@@ -139,3 +139,9 @@ See the LICENSE file for details.
 - Citation Style Language (CSL) Project
 - Zotero Community
 - Mendeley Reference Manager
+
+## Status
+
+- GitHub Release
+- ORCID Research Tool
+- Preparing submission to the official Citation Style Language (CSL) Repository

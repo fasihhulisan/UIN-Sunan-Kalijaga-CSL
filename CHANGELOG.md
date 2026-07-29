@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is inspired by Keep a Changelog.
 
 ---
+## [Unreleased]
+
+### Changed
+- Prepared CSL metadata for submission to the official Citation Style Language (CSL) Repository.
+- Added `default-locale="id-ID"` to the root style.
+- Renamed the CSL file following CSL Repository naming conventions.
+- Updated style metadata (`id`, `self` link, `title`, `title-short`, categories, and documentation link).
 
 ## [1.0.1] - 2026-07-28
 
